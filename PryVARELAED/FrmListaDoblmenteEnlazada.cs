@@ -16,5 +16,23 @@ namespace PryVARELAED
         {
             InitializeComponent();
         }
+
+        clsListaSimple FilaDePersona = new clsListaSimple();
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo ObjNodo = new clsNodo();
+            ObjNodo.Codigo = Convert.ToInt32(TXTcodigo.Text);
+            ObjNodo.Nombre = TXTcodigo.Text;
+            ObjNodo.Tramite = TXTtramite.Text;
+            FilaDePersona.Agregar(ObjNodo);
+            FilaDePersona.Recorrer(dgvListaDoble);
+            FilaDePersona.Recorrer(LSTlistadoble);
+            FilaDePersona.Recorrer(CMDcodigo);
+            FilaDePersona.Recorrer();
+            TXTcodigo.Text = "";
+            TXTnombre.Text = "";
+            TXTtramite.Text = "";
+        }
     }
 }

@@ -3,72 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using System.Windows.Forms;
 
 namespace PryVARELAED
 {
-    internal class clsListaSimple
+    internal class clsCola
     {
         private clsNodo pri;
+        private clsNodo ult;
 
         public clsNodo Primero
-        {
-            get { return pri; }
-            set { pri = value; }
-        }
+        { get { return pri; } set { pri = value; } }
+
+        public clsNodo Ultimo
+        { get { return ult; } set { ult = value; } }
 
         public void Agregar(clsNodo Nuevo)
         {
             if (Primero == null)
             {
                 Primero = Nuevo;
+                Ultimo = Nuevo;
             }
             else
             {
-                if (Nuevo.Codigo <= Primero.Codigo)
-                {
-                    Nuevo.Siguiente = Primero;
-                    Primero = Nuevo;
-                }
-                else
-                {
-                    clsNodo aux = Primero;
-                    clsNodo ant = Primero;
-                    while (Nuevo.Codigo > aux.Codigo)
-                    {
-                        ant = aux;
-                        aux = aux.Siguiente;
-                        if (aux == null)
-                        {
-                            break;
-                        }
-                    }
-                    ant.Siguiente = Nuevo;
-                    Nuevo.Siguiente = aux;
-                }
+                Ultimo.Siguiente = Nuevo;
+                Ultimo = Nuevo;
             }
         }
 
-        public void Eliminar(Int32 Codigo)
+        public void Eliminar()
         {
-            if (Primero.Codigo == Codigo)
+            if (Primero == Ultimo)
+            {
+                Primero = null;
+                Ultimo = null;
+            }
+            else
             {
                 Primero = Primero.Siguiente;
             }
-            else
-            {
-                clsNodo aux1 = Primero;
-                clsNodo aux2 = Primero;
-                if (aux1.Codigo != Codigo)
-                {
-                    aux2 = aux1;
-                    aux1 = aux1.Siguiente;
-                }
-                aux2.Siguiente = aux1.Siguiente;
-            }
         }
-
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -95,16 +69,16 @@ namespace PryVARELAED
             Combo.Items.Clear();
             while (aux != null)
             {
-                Combo.Items.Add(aux.Codigo);
+                Combo.Items.Add(aux.Nombre);
                 aux = aux.Siguiente;
             }
         }
         public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter(" listasimple.csv", false);
+            StreamWriter AD = new StreamWriter(" cola.csv", false);
             AD.WriteLine("LISTA DE ESPERA/n");
-            AD.WriteLine("Codigo;Nombre;Tramite");
+            AD.WriteLine();
             while (aux != null)
             {
                 AD.Write(aux.Codigo);
@@ -114,7 +88,7 @@ namespace PryVARELAED
                 AD.WriteLine(aux.Tramite);
                 aux = aux.Siguiente;
             }
-            AD.Close();
+
         }
     }
 }

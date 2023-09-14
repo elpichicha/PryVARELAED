@@ -1,6 +1,6 @@
 ﻿namespace PryVARELAED
 {
-    partial class FRMcola
+    partial class frmCola
     {
         /// <summary>
         /// Required designer variable.

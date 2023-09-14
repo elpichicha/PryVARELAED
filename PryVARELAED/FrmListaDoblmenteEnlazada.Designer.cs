@@ -33,7 +33,7 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.LSTlistadoble = new System.Windows.Forms.ListBox();
             this.MRCelementoaeliminar = new System.Windows.Forms.GroupBox();
             this.CMDcodigo = new System.Windows.Forms.ComboBox();
             this.LBLcodigo2 = new System.Windows.Forms.Label();
@@ -48,8 +48,8 @@
             this.LBLcodigo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MRClistardatos = new System.Windows.Forms.GroupBox();
-            this.OPTascendente = new System.Windows.Forms.RadioButton();
             this.OPTdescendiente = new System.Windows.Forms.RadioButton();
+            this.OPTascendente = new System.Windows.Forms.RadioButton();
             this.MRClistasimple.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MRCelementoaeliminar.SuspendLayout();
@@ -61,7 +61,7 @@
             // MRClistasimple
             // 
             this.MRClistasimple.Controls.Add(this.dataGridView1);
-            this.MRClistasimple.Controls.Add(this.listBox1);
+            this.MRClistasimple.Controls.Add(this.LSTlistadoble);
             this.MRClistasimple.Location = new System.Drawing.Point(25, 219);
             this.MRClistasimple.Name = "MRClistasimple";
             this.MRClistasimple.Size = new System.Drawing.Size(751, 195);
@@ -96,13 +96,13 @@
             this.Tramte.HeaderText = "Tramite";
             this.Tramte.Name = "Tramte";
             // 
-            // listBox1
+            // LSTlistadoble
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 26);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(175, 121);
-            this.listBox1.TabIndex = 5;
+            this.LSTlistadoble.FormattingEnabled = true;
+            this.LSTlistadoble.Location = new System.Drawing.Point(0, 26);
+            this.LSTlistadoble.Name = "LSTlistadoble";
+            this.LSTlistadoble.Size = new System.Drawing.Size(175, 121);
+            this.LSTlistadoble.TabIndex = 5;
             // 
             // MRCelementoaeliminar
             // 
@@ -236,17 +236,6 @@
             this.MRClistardatos.TabStop = false;
             this.MRClistardatos.Text = "Listar Datos";
             // 
-            // OPTascendente
-            // 
-            this.OPTascendente.AutoSize = true;
-            this.OPTascendente.Location = new System.Drawing.Point(25, 19);
-            this.OPTascendente.Name = "OPTascendente";
-            this.OPTascendente.Size = new System.Drawing.Size(82, 17);
-            this.OPTascendente.TabIndex = 0;
-            this.OPTascendente.TabStop = true;
-            this.OPTascendente.Text = "Ascendente";
-            this.OPTascendente.UseVisualStyleBackColor = true;
-            // 
             // OPTdescendiente
             // 
             this.OPTdescendiente.AutoSize = true;
@@ -257,6 +246,17 @@
             this.OPTdescendiente.TabStop = true;
             this.OPTdescendiente.Text = "Descendiente";
             this.OPTdescendiente.UseVisualStyleBackColor = true;
+            // 
+            // OPTascendente
+            // 
+            this.OPTascendente.AutoSize = true;
+            this.OPTascendente.Location = new System.Drawing.Point(25, 19);
+            this.OPTascendente.Name = "OPTascendente";
+            this.OPTascendente.Size = new System.Drawing.Size(82, 17);
+            this.OPTascendente.TabIndex = 0;
+            this.OPTascendente.TabStop = true;
+            this.OPTascendente.Text = "Ascendente";
+            this.OPTascendente.UseVisualStyleBackColor = true;
             // 
             // FrmListaDoblmenteEnlazada
             // 
@@ -290,7 +290,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tramte;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox LSTlistadoble;
         private System.Windows.Forms.GroupBox MRCelementoaeliminar;
         private System.Windows.Forms.ComboBox CMDcodigo;
         private System.Windows.Forms.Label LBLcodigo2;
