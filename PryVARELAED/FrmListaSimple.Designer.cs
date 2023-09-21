@@ -1,6 +1,6 @@
 ﻿namespace PryVARELAED
 {
-    partial class FrmListaSimple
+    partial class frmListaSimple
     {
         /// <summary>
         /// Required designer variable.

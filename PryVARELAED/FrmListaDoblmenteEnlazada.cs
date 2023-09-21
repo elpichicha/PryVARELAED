@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryVARELAED
 {
-    public partial class FrmListaDoblmenteEnlazada : Form
+    public partial class frmListaDoblmenteEnlazada : Form
     {
-        public FrmListaDoblmenteEnlazada()
+        public frmListaDoblmenteEnlazada()
         {
             InitializeComponent();
         }

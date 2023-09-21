@@ -1,6 +1,6 @@
 ﻿namespace PryVARELAED
 {
-    partial class FrmListaDoblmenteEnlazada
+    partial class frmListaDoblmenteEnlazada
     {
         /// <summary>
         /// Required designer variable.

@@ -63,17 +63,17 @@
     <Compile Include="frmcola.Designer.cs">
       <DependentUpon>frmcola.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmListaDoblmenteEnlazada.cs">
+    <Compile Include="frmListaDoblmenteEnlazada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmListaDoblmenteEnlazada.Designer.cs">
-      <DependentUpon>FrmListaDoblmenteEnlazada.cs</DependentUpon>
+    <Compile Include="frmListaDoblmenteEnlazada.Designer.cs">
+      <DependentUpon>frmListaDoblmenteEnlazada.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmListaSimple.cs">
+    <Compile Include="frmListaSimple.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmListaSimple.Designer.cs">
-      <DependentUpon>FrmListaSimple.cs</DependentUpon>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
@@ -89,11 +89,11 @@
     <EmbeddedResource Include="frmcola.resx">
       <DependentUpon>frmcola.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmListaDoblmenteEnlazada.resx">
-      <DependentUpon>FrmListaDoblmenteEnlazada.cs</DependentUpon>
+    <EmbeddedResource Include="frmListaDoblmenteEnlazada.resx">
+      <DependentUpon>frmListaDoblmenteEnlazada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmListaSimple.resx">
-      <DependentUpon>FrmListaSimple.cs</DependentUpon>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
