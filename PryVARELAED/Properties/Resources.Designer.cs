@@ -63,6 +63,16 @@ namespace PryVARELAED.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a3cf162ce1cb4aefb2b37c3b8f2b73d9e0928ac2_00 {
+            get {
+                object obj = ResourceManager.GetObject("a3cf162ce1cb4aefb2b37c3b8f2b73d9e0928ac2_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descarga {
             get {
                 object obj = ResourceManager.GetObject("descarga", resourceCulture);

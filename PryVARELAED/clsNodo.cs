@@ -8,6 +8,7 @@ namespace PryVARELAED
 {
     internal class clsNodo
     {
+        //Propiedades
         private Int32 cod;
         private String nom;
         private String tra;
@@ -42,6 +43,18 @@ namespace PryVARELAED
         public clsNodo Anterior
         {
             get { return ant; }
+            set { ant = value; }
+        }
+
+        public clsNodo Izquierda
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+
+        public clsNodo Derecha
+        {
+            get { return sig; }
             set { sig = value; }
         }
     }

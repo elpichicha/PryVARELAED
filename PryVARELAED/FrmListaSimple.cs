@@ -16,5 +16,27 @@ namespace PryVARELAED
         {
             InitializeComponent();
         }
+
+        clsListaSimple FilaDePersona = new clsListaSimple();
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmListaSimple_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

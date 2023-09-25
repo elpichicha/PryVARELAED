@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace PryVARELAED
 {
-    public partial class frmCola : Form
+    public partial class frmListaDoble : Form
     {
-        public frmCola()
+        public frmListaDoble()
         {
             InitializeComponent();
         }
 
-        clsCola FilaDePersona = new clsCola();
+        clsListaDoble FilaDePersona = new clsListaDoble();
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -29,8 +29,18 @@ namespace PryVARELAED
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void frmListaDoble_Load(object sender, EventArgs e)
         {
+        }
+
+        private void optAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-}
 }

@@ -28,241 +28,298 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MRCnuevoelemento = new System.Windows.Forms.GroupBox();
-            this.BTNagregar = new System.Windows.Forms.Button();
-            this.TXTtramite = new System.Windows.Forms.TextBox();
-            this.TXTnombre = new System.Windows.Forms.TextBox();
-            this.LBLtramite = new System.Windows.Forms.Label();
-            this.LBLnombre = new System.Windows.Forms.Label();
-            this.TXTcodigo = new System.Windows.Forms.TextBox();
-            this.LBLcodigo = new System.Windows.Forms.Label();
-            this.MRCelementoaeliminar = new System.Windows.Forms.GroupBox();
-            this.BTNeliminar = new System.Windows.Forms.Button();
-            this.LBLcodigo2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.MRClistasimple = new System.Windows.Forms.GroupBox();
-            this.CMDcodigo = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tramte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MRCnuevoelemento.SuspendLayout();
-            this.MRCelementoaeliminar.SuspendLayout();
+            this.mrcListado = new System.Windows.Forms.GroupBox();
+            this.dgvListaSimple = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lstListaSimple = new System.Windows.Forms.ListBox();
+            this.dgvPila = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mrcNuevoElemento = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtTramite = new System.Windows.Forms.TextBox();
+            this.lblTrámite = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.mrcEliminar = new System.Windows.Forms.GroupBox();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.MRClistasimple.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.mrcListado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).BeginInit();
+            this.mrcNuevoElemento.SuspendLayout();
+            this.mrcEliminar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // MRCnuevoelemento
-            // 
-            this.MRCnuevoelemento.Controls.Add(this.BTNagregar);
-            this.MRCnuevoelemento.Controls.Add(this.TXTtramite);
-            this.MRCnuevoelemento.Controls.Add(this.TXTnombre);
-            this.MRCnuevoelemento.Controls.Add(this.LBLtramite);
-            this.MRCnuevoelemento.Controls.Add(this.LBLnombre);
-            this.MRCnuevoelemento.Controls.Add(this.TXTcodigo);
-            this.MRCnuevoelemento.Controls.Add(this.LBLcodigo);
-            this.MRCnuevoelemento.Location = new System.Drawing.Point(246, 48);
-            this.MRCnuevoelemento.Name = "MRCnuevoelemento";
-            this.MRCnuevoelemento.Size = new System.Drawing.Size(191, 163);
-            this.MRCnuevoelemento.TabIndex = 2;
-            this.MRCnuevoelemento.TabStop = false;
-            this.MRCnuevoelemento.Text = "Nuevo Elemento";
-            // 
-            // BTNagregar
-            // 
-            this.BTNagregar.Location = new System.Drawing.Point(74, 132);
-            this.BTNagregar.Name = "BTNagregar";
-            this.BTNagregar.Size = new System.Drawing.Size(85, 21);
-            this.BTNagregar.TabIndex = 6;
-            this.BTNagregar.Text = "Agregar";
-            this.BTNagregar.UseVisualStyleBackColor = true;
-            // 
-            // TXTtramite
-            // 
-            this.TXTtramite.Location = new System.Drawing.Point(78, 106);
-            this.TXTtramite.Name = "TXTtramite";
-            this.TXTtramite.Size = new System.Drawing.Size(82, 20);
-            this.TXTtramite.TabIndex = 5;
-            // 
-            // TXTnombre
-            // 
-            this.TXTnombre.Location = new System.Drawing.Point(78, 68);
-            this.TXTnombre.Name = "TXTnombre";
-            this.TXTnombre.Size = new System.Drawing.Size(82, 20);
-            this.TXTnombre.TabIndex = 4;
-            // 
-            // LBLtramite
-            // 
-            this.LBLtramite.AutoSize = true;
-            this.LBLtramite.Location = new System.Drawing.Point(6, 109);
-            this.LBLtramite.Name = "LBLtramite";
-            this.LBLtramite.Size = new System.Drawing.Size(42, 13);
-            this.LBLtramite.TabIndex = 3;
-            this.LBLtramite.Text = "Tramite";
-            // 
-            // LBLnombre
-            // 
-            this.LBLnombre.AutoSize = true;
-            this.LBLnombre.Location = new System.Drawing.Point(6, 68);
-            this.LBLnombre.Name = "LBLnombre";
-            this.LBLnombre.Size = new System.Drawing.Size(44, 13);
-            this.LBLnombre.TabIndex = 2;
-            this.LBLnombre.Text = "Nombre";
-            // 
-            // TXTcodigo
-            // 
-            this.TXTcodigo.Location = new System.Drawing.Point(80, 42);
-            this.TXTcodigo.Name = "TXTcodigo";
-            this.TXTcodigo.Size = new System.Drawing.Size(80, 20);
-            this.TXTcodigo.TabIndex = 1;
-            // 
-            // LBLcodigo
-            // 
-            this.LBLcodigo.AutoSize = true;
-            this.LBLcodigo.Location = new System.Drawing.Point(6, 31);
-            this.LBLcodigo.Name = "LBLcodigo";
-            this.LBLcodigo.Size = new System.Drawing.Size(40, 13);
-            this.LBLcodigo.TabIndex = 0;
-            this.LBLcodigo.Text = "Codigo";
-            // 
-            // MRCelementoaeliminar
-            // 
-            this.MRCelementoaeliminar.Controls.Add(this.CMDcodigo);
-            this.MRCelementoaeliminar.Controls.Add(this.LBLcodigo2);
-            this.MRCelementoaeliminar.Controls.Add(this.BTNeliminar);
-            this.MRCelementoaeliminar.Location = new System.Drawing.Point(456, 54);
-            this.MRCelementoaeliminar.Name = "MRCelementoaeliminar";
-            this.MRCelementoaeliminar.Size = new System.Drawing.Size(166, 156);
-            this.MRCelementoaeliminar.TabIndex = 3;
-            this.MRCelementoaeliminar.TabStop = false;
-            this.MRCelementoaeliminar.Text = "Elementa a eliminar";
-            // 
-            // BTNeliminar
-            // 
-            this.BTNeliminar.Location = new System.Drawing.Point(29, 126);
-            this.BTNeliminar.Name = "BTNeliminar";
-            this.BTNeliminar.Size = new System.Drawing.Size(89, 20);
-            this.BTNeliminar.TabIndex = 0;
-            this.BTNeliminar.Text = "Eliminar";
-            this.BTNeliminar.UseVisualStyleBackColor = true;
-            // 
-            // LBLcodigo2
-            // 
-            this.LBLcodigo2.AutoSize = true;
-            this.LBLcodigo2.Location = new System.Drawing.Point(11, 98);
-            this.LBLcodigo2.Name = "LBLcodigo2";
-            this.LBLcodigo2.Size = new System.Drawing.Size(40, 13);
-            this.LBLcodigo2.TabIndex = 1;
-            this.LBLcodigo2.Text = "Codigo";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PryVARELAED.Properties.Resources.lisa;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // listBox1
+            // mrcListado
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 26);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(175, 121);
-            this.listBox1.TabIndex = 5;
+            this.mrcListado.Controls.Add(this.dgvListaSimple);
+            this.mrcListado.Controls.Add(this.lstListaSimple);
+            this.mrcListado.Location = new System.Drawing.Point(37, 263);
+            this.mrcListado.Name = "mrcListado";
+            this.mrcListado.Size = new System.Drawing.Size(727, 293);
+            this.mrcListado.TabIndex = 14;
+            this.mrcListado.TabStop = false;
+            this.mrcListado.Text = "Listado en una Lista y una Grilla";
             // 
-            // MRClistasimple
+            // dgvListaSimple
             // 
-            this.MRClistasimple.Controls.Add(this.dataGridView1);
-            this.MRClistasimple.Controls.Add(this.listBox1);
-            this.MRClistasimple.Location = new System.Drawing.Point(18, 231);
-            this.MRClistasimple.Name = "MRClistasimple";
-            this.MRClistasimple.Size = new System.Drawing.Size(751, 195);
-            this.MRClistasimple.TabIndex = 6;
-            this.MRClistasimple.TabStop = false;
-            this.MRClistasimple.Text = "Listado en una Lista y Grilla";
+            this.dgvListaSimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaSimple.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dgvListaSimple.Location = new System.Drawing.Point(234, 29);
+            this.dgvListaSimple.Name = "dgvListaSimple";
+            this.dgvListaSimple.RowHeadersWidth = 51;
+            this.dgvListaSimple.Size = new System.Drawing.Size(474, 238);
+            this.dgvListaSimple.TabIndex = 5;
             // 
-            // CMDcodigo
+            // dataGridViewTextBoxColumn1
             // 
-            this.CMDcodigo.FormattingEnabled = true;
-            this.CMDcodigo.Location = new System.Drawing.Point(65, 99);
-            this.CMDcodigo.Name = "CMDcodigo";
-            this.CMDcodigo.Size = new System.Drawing.Size(82, 21);
-            this.CMDcodigo.TabIndex = 2;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 70;
             // 
-            // dataGridView1
+            // dataGridViewTextBoxColumn2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Nombre,
-            this.Tramte});
-            this.dataGridView1.Location = new System.Drawing.Point(192, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(532, 140);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
             // 
-            // Codigo
+            // dataGridViewTextBoxColumn3
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Trámite";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // Nombre
+            // lstListaSimple
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.lstListaSimple.FormattingEnabled = true;
+            this.lstListaSimple.Location = new System.Drawing.Point(17, 29);
+            this.lstListaSimple.Name = "lstListaSimple";
+            this.lstListaSimple.Size = new System.Drawing.Size(191, 238);
+            this.lstListaSimple.TabIndex = 0;
             // 
-            // Tramte
+            // dgvPila
             // 
-            this.Tramte.HeaderText = "Tramite";
-            this.Tramte.Name = "Tramte";
+            this.dgvPila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvPila.Location = new System.Drawing.Point(271, 291);
+            this.dgvPila.Name = "dgvPila";
+            this.dgvPila.RowHeadersWidth = 51;
+            this.dgvPila.Size = new System.Drawing.Size(474, 238);
+            this.dgvPila.TabIndex = 12;
             // 
-            // FrmListaSimple
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Trámite";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // mrcNuevoElemento
+            // 
+            this.mrcNuevoElemento.Controls.Add(this.btnAgregar);
+            this.mrcNuevoElemento.Controls.Add(this.txtTramite);
+            this.mrcNuevoElemento.Controls.Add(this.lblTrámite);
+            this.mrcNuevoElemento.Controls.Add(this.txtNombre);
+            this.mrcNuevoElemento.Controls.Add(this.lblNombre);
+            this.mrcNuevoElemento.Controls.Add(this.txtCodigo);
+            this.mrcNuevoElemento.Controls.Add(this.lblCodigo);
+            this.mrcNuevoElemento.Location = new System.Drawing.Point(271, 8);
+            this.mrcNuevoElemento.Name = "mrcNuevoElemento";
+            this.mrcNuevoElemento.Size = new System.Drawing.Size(234, 231);
+            this.mrcNuevoElemento.TabIndex = 13;
+            this.mrcNuevoElemento.TabStop = false;
+            this.mrcNuevoElemento.Text = "Nuevo Elemento";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Enabled = false;
+            this.btnAgregar.Location = new System.Drawing.Point(25, 175);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(188, 32);
+            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // txtTramite
+            // 
+            this.txtTramite.Enabled = false;
+            this.txtTramite.Location = new System.Drawing.Point(88, 114);
+            this.txtTramite.Name = "txtTramite";
+            this.txtTramite.Size = new System.Drawing.Size(125, 20);
+            this.txtTramite.TabIndex = 5;
+            // 
+            // lblTrámite
+            // 
+            this.lblTrámite.AutoSize = true;
+            this.lblTrámite.Location = new System.Drawing.Point(22, 119);
+            this.lblTrámite.Name = "lblTrámite";
+            this.lblTrámite.Size = new System.Drawing.Size(42, 13);
+            this.lblTrámite.TabIndex = 4;
+            this.lblTrámite.Text = "Tramite";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(88, 79);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(124, 20);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(21, 84);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(126, 43);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(86, 20);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(21, 48);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Codigo";
+            // 
+            // mrcEliminar
+            // 
+            this.mrcEliminar.Controls.Add(this.cmbCodigo);
+            this.mrcEliminar.Controls.Add(this.btnEliminar);
+            this.mrcEliminar.Controls.Add(this.label3);
+            this.mrcEliminar.Location = new System.Drawing.Point(530, 12);
+            this.mrcEliminar.Name = "mrcEliminar";
+            this.mrcEliminar.Size = new System.Drawing.Size(234, 231);
+            this.mrcEliminar.TabIndex = 15;
+            this.mrcEliminar.TabStop = false;
+            this.mrcEliminar.Text = "Elemento Eliminado";
+            // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(27, 130);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(188, 21);
+            this.cmbCodigo.TabIndex = 14;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Location = new System.Drawing.Point(27, 175);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(188, 32);
+            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Codigo";
+            // 
+            // frmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.MRClistasimple);
+            this.ClientSize = new System.Drawing.Size(800, 564);
+            this.Controls.Add(this.mrcEliminar);
+            this.Controls.Add(this.mrcListado);
+            this.Controls.Add(this.dgvPila);
+            this.Controls.Add(this.mrcNuevoElemento);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.MRCelementoaeliminar);
-            this.Controls.Add(this.MRCnuevoelemento);
-            this.Name = "FrmListaSimple";
+            this.Name = "frmListaSimple";
             this.Text = "FrmListaSimple";
-            this.MRCnuevoelemento.ResumeLayout(false);
-            this.MRCnuevoelemento.PerformLayout();
-            this.MRCelementoaeliminar.ResumeLayout(false);
-            this.MRCelementoaeliminar.PerformLayout();
+            this.Load += new System.EventHandler(this.frmListaSimple_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.MRClistasimple.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.mrcListado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaSimple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
+            this.mrcNuevoElemento.ResumeLayout(false);
+            this.mrcNuevoElemento.PerformLayout();
+            this.mrcEliminar.ResumeLayout(false);
+            this.mrcEliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox MRCnuevoelemento;
-        private System.Windows.Forms.Button BTNagregar;
-        private System.Windows.Forms.TextBox TXTtramite;
-        private System.Windows.Forms.TextBox TXTnombre;
-        private System.Windows.Forms.Label LBLtramite;
-        private System.Windows.Forms.Label LBLnombre;
-        private System.Windows.Forms.TextBox TXTcodigo;
-        private System.Windows.Forms.Label LBLcodigo;
-        private System.Windows.Forms.GroupBox MRCelementoaeliminar;
-        private System.Windows.Forms.Label LBLcodigo2;
-        private System.Windows.Forms.Button BTNeliminar;
-        private System.Windows.Forms.ComboBox CMDcodigo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.GroupBox MRClistasimple;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tramte;
+        private System.Windows.Forms.GroupBox mrcListado;
+        private System.Windows.Forms.DataGridView dgvListaSimple;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.ListBox lstListaSimple;
+        private System.Windows.Forms.DataGridView dgvPila;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.GroupBox mrcNuevoElemento;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox txtTramite;
+        private System.Windows.Forms.Label lblTrámite;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.GroupBox mrcEliminar;
+        private System.Windows.Forms.ComboBox cmbCodigo;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -32,6 +32,7 @@ namespace PryVARELAED
             if (Primero == null)
             {
                 Primero = Nuevo;
+                Ultimo = Nuevo;
             }
             else
             {
@@ -43,7 +44,7 @@ namespace PryVARELAED
                 }
                 else
                 {
-                    if (Nuevo.Codigo > Primero.Codigo)
+                    if (Nuevo.Codigo > Ultimo.Codigo)
                     {
                         Ultimo.Siguiente = Nuevo;
                         Nuevo.Anterior = Ultimo;
@@ -53,21 +54,55 @@ namespace PryVARELAED
                     {
                         clsNodo aux = Primero;
                         clsNodo ant = Primero;
-                        while (Nuevo.Codigo > aux.Codigo)
+                        while (aux.Codigo < Nuevo.Codigo)
                         {
                             ant = aux;
                             aux = aux.Siguiente;
-                            if (aux == null)
-                            {
-                                break;
-                            }
                         }
-                        Nuevo.Siguiente = aux;
-                        Nuevo.Anterior = ant;
                         ant.Siguiente = Nuevo;
+                        Nuevo.Siguiente = aux;
                         aux.Anterior = Nuevo;
+                        Nuevo.Anterior = ant;
                     }
 
+                }
+            }
+        }
+
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            {
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        ant.Siguiente = aux.Siguiente;
+                        aux = aux.Siguiente;
+                        aux.Anterior = ant;
+                    }
                 }
             }
         }
@@ -92,6 +127,40 @@ namespace PryVARELAED
                 aux = aux.Siguiente;
             }
         }
+
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Nombre);
+                aux = aux.Anterior;
+            }
+        }
+
         public void Recorrer(ComboBox Combo)
         {
             clsNodo aux = Primero;
@@ -105,7 +174,7 @@ namespace PryVARELAED
         public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter(" listadoble.csv", false);
+            StreamWriter AD = new StreamWriter(" listasimple.csv", false);
             AD.WriteLine("LISTA DE ESPERA/n");
             AD.WriteLine("Codigo;Nombre;Tramite");
             while (aux != null)
